@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "typeRoots": ["types"],
+    "include": [
+      "./**/*.jsx",
+      "./**/*.js"
+    ],
+    "exclude": ["node_modules", "dist"],
+    "experimentalDecorators": true,
+    "esModuleInterop": true
+  }
+}
+

@@ -27,3 +27,6 @@ yarn.lock
 *.sln
 *.sw?
 *.lock
+
+# log4j
+/packages/log4j/logs

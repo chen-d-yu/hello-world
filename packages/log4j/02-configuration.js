@@ -1,13 +1,16 @@
 import log4js from "log4js";
+import config from "./config.js";
 
 export default function () {
-  // 获取log4j的实例
-  const logger = log4js.getLogger();
+  log4js.configure(config);
 
-  // 默认的级别是 OFF，表示不打印任何日志，这里修改级别为debug，表示打印debug以下的日志
-  logger.level = "debug";
+  // 获取categories的default分组实例，当分组key为default时，可不传递key值
+  const defaultLogger = log4js.getLogger();
 
-  logger.debug("Some debug messages");
-  logger.info("Some info messages");
-  logger.warn("Some warning messages");
+  // // 获取app分组实例
+  // const appLogger = log4js.getLogger("app");
+
+  // 分别打印两个分组日志
+  defaultLogger.debug("Some debug messages");
+  // appLogger.debug("Some debug messages");
 }

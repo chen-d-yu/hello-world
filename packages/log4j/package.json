@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^20.11.16",
+    "global": "^4.4.0",
     "log4js": "^6.9.1"
   }
 }
