@@ -60,7 +60,15 @@ const config = {
     pattern: {
       type: "console",
       layout: {
-        type: "pattern"
+        type: "pattern",
+        pattern: "%d %p %c %m%n"
+      }
+    },
+    customLayout: {
+      type: "console",
+      layout: {
+        type: "json",
+        separator: "," // 分隔符
       }
     }
   },
@@ -79,7 +87,7 @@ const config = {
       level: "DEBUG"
     },
     app: {
-      appenders: ["fileout", "app", "datefileout"],
+      appenders: ["pattern", "app", "datefileout"],
       level: "DEBUG"
     }
   }
